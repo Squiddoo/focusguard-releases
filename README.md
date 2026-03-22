@@ -35,7 +35,7 @@ Lock apps you waste time on, set an unlock time, and they do not open until that
 - **Emergency unlock safeguards**
 - **Tray controls** (open, minimize, quit)
 - **About panel** with release metadata
-- **Language selector** with European locale options
+- **6 languages**: English, Dutch, Swedish, German, Spanish, French
 
 ## How Updates Work
 
@@ -57,6 +57,8 @@ See all versions: [Releases](https://github.com/Squiddoo/focusguard-releases/rel
 - FocusGuard is for productivity enforcement, not kernel-level anti-tamper security
 
 ## Questions
+
+See [FAQ.md](FAQ.md) for frequently asked questions.
 
 Main project repository: [FocusGuard](https://github.com/Squiddoo/focusguard)
 
