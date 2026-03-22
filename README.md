@@ -60,8 +60,6 @@ See all versions: [Releases](https://github.com/Squiddoo/focusguard-releases/rel
 
 See [FAQ.md](FAQ.md) for frequently asked questions.
 
-Main project repository: [FocusGuard](https://github.com/Squiddoo/focusguard)
-
 ---
 
 Built to keep focus practical and reliable.
