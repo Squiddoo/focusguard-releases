@@ -1,4 +1,3 @@
-Je hebt gelijk, laat me het meer simpel en naturel maken:
 
 ```markdown
 # FocusGuard Releases
