@@ -64,4 +64,4 @@ See [FAQ.md](FAQ.md) for frequently asked questions.
 
 Built to keep focus practical and reliable.
 
-Latest Release: v1.0.14
+Latest Release: v1.0.15
