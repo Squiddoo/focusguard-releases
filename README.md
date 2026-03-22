@@ -1,116 +1,68 @@
-# FocusGuard
+# FocusGuard Releases
 
-FocusGuard is a Windows desktop app that helps users stay focused by temporarily blocking distracting applications until a chosen unlock time.
+Here is where you download **FocusGuard**: a lightweight Windows app that blocks distracting apps until your chosen unlock time.
 
-## Current Version
+## Download
 
-- App version: `1.0.12`
-- Platform: Windows (x64)
-- Distribution: NSIS installer with GitHub Releases auto-update
+Get the latest version:
+[**FocusGuard-Setup-1.0.12.exe**](https://github.com/Squiddoo/focusguard-releases/releases/download/v1.0.12/FocusGuard-Setup-1.0.12.exe)
 
-## Core Features
+Windows 10/11 (x64) - installer + automatic updates
 
-- App locking with independent timers per executable.
-- Forced-close protection when a blocked app is launched.
-- Emergency unlock mode (15 minutes) with safety constraints.
-- Lock removal guardrails with explicit confirmation.
-- Settings drawer with persistent preferences.
-- First-open update notes sourced from GitHub release notes.
-- Tray integration (open, minimize, quit, and single-click open).
-- Language selection support with locale-based settings.
+## What It Does
 
-## Technology Stack
+Lock apps you waste time on, set an unlock time, and they do not open until that time.
 
-- Electron
-- React
-- Vite
-- TypeScript
-- electron-builder
-- electron-updater
+- Lock multiple apps at once
+- Add a reason for each lock
+- Use emergency unlock for 15 minutes if needed
+- Configure notifications, fullscreen, and update behavior
+- Receive silent background updates
 
-## Project Structure
+## Install and Run
 
-- `electron/`: Electron main process, preload bridge, process guard logic.
-- `src/`: React renderer UI and styling.
-- `scripts/`: release and build automation scripts.
-- `assets/`: app icon and brand assets used by installer/runtime.
-- `release/`: generated installers and updater metadata.
+1. Download the installer
+2. Run setup
+3. Open FocusGuard
+4. Select an app and set unlock time
+5. Start focus mode
 
-## Local Development
+## Features
 
-Install dependencies:
+- **Multi-lock support** with different unlock times
+- **Silent auto-update** with restart flow
+- **Settings drawer** with persistent preferences
+- **Emergency unlock safeguards**
+- **Tray controls** (open, minimize, quit)
+- **About panel** with release metadata
+- **Language selector** with European locale options
 
-```bash
-npm install
-```
+## How Updates Work
 
-Run in development mode:
+FocusGuard checks for updates on startup.
 
-```bash
-npm run dev
-```
+- Downloads updates in the background
+- Shows in-app update status
+- Restarts automatically to apply update
+- Keeps locks and settings intact
 
-## Build and Packaging
+## Release History
 
-Build renderer and Electron bundles:
+See all versions: [Releases](https://github.com/Squiddoo/focusguard-releases/releases)
 
-```bash
-npm run build
-```
+## Known Limitations
 
-Create Windows installer:
+- System-critical Windows processes cannot be locked
+- Users with admin-level control can bypass user-space protections
+- FocusGuard is for productivity enforcement, not kernel-level anti-tamper security
 
-```bash
-npm run dist:win
-```
+## Questions
 
-Output artifacts are written to `release/`.
+Main project repository: [FocusGuard](https://github.com/Squiddoo/focusguard)
 
-## Auto-Update and Release Workflow
+---
 
-FocusGuard uses `electron-updater` with GitHub Releases.
-
-1. Bump version in `package.json`.
-2. Add a matching entry in `CHANGELOG.md`.
-3. Build installer artifacts.
-4. Publish via script:
-
-```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/publish-release.ps1 -Owner Squiddoo -Repo focusguard-releases -Tag v1.0.12 -ReleaseDir ./release -ChangelogPath ./CHANGELOG.md
-```
-
-The publish script automatically:
-
-- Creates or updates the tagged GitHub release.
-- Keeps only updater-required assets:
-	- `FocusGuard-Setup-<version>.exe`
-	- `FocusGuard-Setup-<version>.exe.blockmap`
-	- `latest.yml`
-- Syncs release notes from `CHANGELOG.md`.
-- Updates README release references (remote + local).
-
-## Runtime Behavior Notes
-
-- Lock enforcement runs in user space and polls running processes.
-- Emergency unlock expires automatically and enforcement resumes.
-- Window close hides to tray unless user explicitly quits.
-- Auto-update can install silently and restart the app.
-
-## Security Notes
-
-- Never commit secrets or personal access tokens.
-- Keep `GH_TOKEN` private and scoped minimally.
-- Rotate token immediately if exposure is suspected.
-
-## Product Limitations
-
-- FocusGuard is a productivity guard, not a kernel-level anti-tamper system.
-- Admin-level users can still bypass restrictions outside normal user flow.
-
-## Support and Releases
-
-- Release repository: `https://github.com/Squiddoo/focusguard-releases`
-- Main repository (code/issues): `https://github.com/Squiddoo/focusguard`
+Built to keep focus practical and reliable.
 
 
 
