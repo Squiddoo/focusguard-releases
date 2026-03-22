@@ -1,0 +1,98 @@
+{
+  "name": "focusguard",
+  "version": "1.0.35",
+  "description": "Lock distracting apps until a chosen time with safe emergency unlock.",
+  "main": "dist-electron/main.js",
+  "author": "FocusGuard",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -k \"vite\" \"tsc -p electron/tsconfig.json --watch\" \"wait-on tcp:5173 file:dist-electron/main.js && cross-env VITE_DEV_SERVER_URL=http://localhost:5173 electron .\"",
+    "icon:generate": "node scripts/generate-icon.mjs",
+    "prebuild": "npm run icon:generate",
+    "build": "vite build && tsc -p electron/tsconfig.json",
+    "dist": "npm run build && electron-builder",
+    "dist:win": "npm run build && electron-builder --win"
+  },
+  "dependencies": {
+    "@fontsource/space-grotesk": "^5.1.0",
+    "@supabase/supabase-js": "^2.99.3",
+    "date-fns": "^4.1.0",
+    "dotenv": "^17.3.1",
+    "electron-log": "^5.2.4",
+    "electron-updater": "^6.3.9",
+    "lucide-react": "^0.511.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.21",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.5.1",
+    "concurrently": "^9.1.2",
+    "cross-env": "^7.0.3",
+    "electron": "^31.7.7",
+    "electron-builder": "^24.13.3",
+    "png-to-ico": "^3.0.1",
+    "rcedit": "^5.0.2",
+    "sharp": "^0.34.5",
+    "typescript": "^5.8.3",
+    "vite": "^5.4.19",
+    "wait-on": "^8.0.3"
+  },
+  "build": {
+    "appId": "com.focusguard.app",
+    "productName": "FocusGuard",
+    "afterPack": "scripts/after-pack.cjs",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**",
+      "dist-electron/**",
+      "assets/**",
+      "package.json"
+    ],
+    "extraMetadata": {
+      "main": "dist-electron/main.js"
+    },
+    "extraResources": [
+      {
+        "from": "assets/focusguard.ico",
+        "to": "assets/focusguard.ico"
+      }
+    ],
+    "win": {
+      "signAndEditExecutable": false,
+      "icon": "assets/focusguard.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "artifactName": "${productName}-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "allowElevation": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "FocusGuard",
+      "installerIcon": "assets/focusguard.ico",
+      "uninstallerIcon": "assets/focusguard.ico",
+      "installerHeaderIcon": "assets/focusguard.ico"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "Squiddoo",
+        "repo": "FocusGuard"
+      }
+    ]
+  }
+}
