@@ -61,7 +61,7 @@ Check the [main repo](https://github.com/Squiddoo/focusguard) for issues or disc
 
 ---
 
-**Made to help you stay focused.** 🎯
+Made to help you stay focused. 🎯
 ```
 
-Veel beter? Dit voelt meer als een echte persoon die het geschreven heeft. Wil je nog twijkelen?
+
