@@ -5,7 +5,7 @@ Here is where you download **FocusGuard**: a lightweight Windows app that blocks
 ## Download
 
 Get the latest version:
-[**FocusGuard-Setup-1.0.12.exe**](https://github.com/Squiddoo/focusguard-releases/releases/download/v1.0.12/FocusGuard-Setup-1.0.12.exe)
+[**FocusGuard-Setup-1.0.13.exe**](https://github.com/Squiddoo/focusguard-releases/releases/download/v1.0.13/FocusGuard-Setup-1.0.13.exe)
 
 Windows 10/11 (x64) - installer + automatic updates
 
@@ -64,4 +64,4 @@ Main project repository: [FocusGuard](https://github.com/Squiddoo/focusguard)
 
 Built to keep focus practical and reliable.
 
-Latest Release: v1.0.12
+Latest Release: v1.0.13
