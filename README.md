@@ -64,5 +64,4 @@ Main project repository: [FocusGuard](https://github.com/Squiddoo/focusguard)
 
 Built to keep focus practical and reliable.
 
-
-
+Latest Release: v1.0.12
