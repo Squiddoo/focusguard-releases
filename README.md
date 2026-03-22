@@ -7,7 +7,7 @@ Here's where you download **FocusGuard** — a lightweight Windows app that bloc
 ## Download
 
 Get the latest version:
-[FocusGuard-Setup-1.0.8.exe](https://github.com/Squiddoo/focusguard-releases/releases/download/v1.0.8/FocusGuard-Setup-1.0.8.exe)
+[**FocusGuard-Setup-1.0.8.exe**](https://github.com/Squiddoo/focusguard-releases/releases/download/v1.0.8/FocusGuard-Setup-1.0.8.exe)
 
 Windows 10/11 (x64) • ~90 MB installer
 
