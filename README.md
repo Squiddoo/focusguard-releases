@@ -1,13 +1,10 @@
-
-```markdown
 # FocusGuard Releases
 
 Here's where you download **FocusGuard** — a lightweight Windows app that blocks distracting apps until you say they're allowed again.
 
 ## Download
 
-Get the latest version:
-[**FocusGuard-Setup-1.0.8.exe**](https://github.com/Squiddoo/focusguard-releases/releases/download/v1.0.8/FocusGuard-Setup-1.0.8.exe)
+Get the latest version: [**FocusGuard-Setup-1.0.9.exe**](https://github.com/Squiddoo/focusguard-releases/releases/download/v1.0.9/FocusGuard-Setup-1.0.9.exe)
 
 Windows 10/11 (x64) • ~90 MB installer
 
@@ -41,6 +38,7 @@ Lock apps you waste time on, set an unlock time, and they don't open until that 
 ## How Updates Work
 
 Updates check automatically when you start the app. If there's a new version:
+
 - Downloads in background
 - Shows a progress bar at the top
 - Restarts automatically
@@ -63,6 +61,3 @@ Check the [main repo](https://github.com/Squiddoo/focusguard) for issues or disc
 ---
 
 Made to help you stay focused. 🎯
-```
-
-
